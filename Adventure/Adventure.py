@@ -7,6 +7,13 @@ class Adventure:
     def __init__(self, bot):
         self.bot = bot
 
+    
+    @commands.command()
+    async def punch(self, user : discord.Member):
+        """I will punch anyone! >.<"""
+
+        await self.bot.say("You punched " + user.mention + "!")
+
     @commands.command(no_pm=False)
     async def beginadventure(self):
         """One path of many begins - quote from someone"""
