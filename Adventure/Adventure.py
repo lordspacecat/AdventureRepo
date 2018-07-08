@@ -6,7 +6,14 @@ class Adventure:
 
     def __init__(self, bot):
         self.bot = bot
-
+    
+    @commands.command(pass_context=True)
+    async def contextcom(self, ctx):
+        """haha faggot"""
+        
+        name = ctx.message
+        await self.bot.say(name)
+        await self.bot.say("began his adventure. \nIf you are 'Ticketed you may continue.")
 
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
