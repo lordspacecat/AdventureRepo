@@ -11,7 +11,7 @@ class Adventure:
     async def multiply(*args):
         z = 1
         for num in args:
-            z *= num
+            z = num
         print(z)
         
     @commands.command(pass_context=True)
