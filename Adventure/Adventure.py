@@ -8,9 +8,11 @@ class Adventure:
         self.bot = bot
     
     @commands.command(pass_context=True)
-    async def multiply(x, y):
-        print (x * y)
-
+    def multiply(*args):
+        z = 1
+        for num in args:
+            z *= num
+        print(z)
         
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
