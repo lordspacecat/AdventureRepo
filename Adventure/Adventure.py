@@ -14,7 +14,7 @@ class Adventure:
         
         await self.bot.say("You punched!")
 
-    @commands.command(no_pm=False)
+    @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
         """One path of many begins - quote from someone"""
         
