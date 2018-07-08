@@ -11,9 +11,9 @@ class Adventure:
     async def contextcom(self, ctx):
         """haha faggot"""
         
-        name = ctx.message
+        name = ctx.message.author.name
         await self.bot.say(name)("began his adventure.")
-
+        
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
         """One path of many begins - quote from someone"""
