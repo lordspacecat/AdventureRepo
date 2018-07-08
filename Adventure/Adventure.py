@@ -8,7 +8,7 @@ class Adventure:
         self.bot = bot
     
     @commands.command(pass_context=True)
-    def multiply(*args):
+    async def multiply(*args):
         z = 1
         for num in args:
             z *= num
