@@ -9,7 +9,7 @@ class Adventure:
         
     
     @commands.command()
-    async def punch(self, role:discord.Role):
+    async def punch(self):
         """I will punch anyone! >.<"""
         
         await self.bot.say("You punched!")
@@ -19,7 +19,7 @@ class Adventure:
         """One path of many begins - quote from someone"""
         
         name = ctx.message.author.name
-        await self.bot.say("(name) began his adventure. \nIf you are 'Ticketed', you may proceed.")
+        await self.bot.say(name)
         
     @commands.command(no_pm=False)
     async def 
