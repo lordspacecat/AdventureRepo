@@ -8,12 +8,9 @@ class Adventure:
         self.bot = bot
     
     @commands.command(pass_context=True)
-    async def contextcom(self, ctx):
-        """haha faggot"""
-        
-        name = ctx.message.author.name
-        await self.bot.say(name)
-        and self.bot.say("began his adventure.")
+    def multiply(x, y):
+        print (x * y)
+
         
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
