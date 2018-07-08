@@ -12,7 +12,7 @@ class Adventure:
     async def punch(self, role:discord.Role):
         """I will punch anyone! >.<"""
         
-        answer = await self.bot.wait_for_message(timeout=120, author=author)
+        answer = await self.bot.wait_for_message(timeout=120)
         if answer not in discord.Role:
             await self.bot.say("Timed out, canceling")
     
