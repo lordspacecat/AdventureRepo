@@ -17,8 +17,12 @@ class Adventure:
     @commands.command(no_pm=False)
     async def beginadventure(self):
         """One path of many begins - quote from someone"""
-
-        await self.bot.say("Protag-kun began his adventure. \nIf you are 'Ticketed', you may proceed.")
+        
+        name = ctx.message.author.name
+        await self.bot.say("(name) began his adventure. \nIf you are 'Ticketed', you may proceed.")
+        
+    @commands.command(no_pm=False)
+    async def 
 
 def setup(bot):
     bot.add_cog(Adventure(bot)) 
