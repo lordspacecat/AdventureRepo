@@ -9,8 +9,9 @@ class Adventure:
         
     
     @commands.command()
-    async def punch(self, "role : discord.Role"):
+    async def punch(self, role : discord.Role):
         """I will punch anyone! >.<"""
+     role = discord.utils.get(server.roles, id=role_id)
 
         await self.bot.say("You punched!")
 
