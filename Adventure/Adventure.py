@@ -13,7 +13,8 @@ class Adventure:
         """One path of many begins - quote from someone"""
         
         name = ctx.message.author.name
-        await self.bot.say(name "began his adventure. \nIf you are 'Ticketed you may continue.")
+        await self.bot.say(name)
+        await self.bot.say("began his adventure. \nIf you are 'Ticketed you may continue.")
    
 
 def setup(bot):
