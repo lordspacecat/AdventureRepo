@@ -12,7 +12,8 @@ class Adventure:
         """haha faggot"""
         
         name = ctx.message.author.name
-        await self.bot.say(name)("began his adventure.")
+        await self.bot.say(name)
+        and self.bot.say("began his adventure.")
         
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
