@@ -7,27 +7,6 @@ class Adventure:
     def __init__(self, bot):
         self.bot = bot
         
-        
-    @commands.command(name="add", pass_context=True)
-    @checks.mod_or_permissions(administrator=True)
-    async def ccroleadd(self, ctx, command: str):
-
-        
-        await self.bot.say('What roles should it add? (Must be comma separated)\nSay `None` to skip adding roles')
-
-        answer = await self.bot.wait_for_message(timeout=999, author=author)
-        if not answer:
-            await self.bot.say("Timed out, canceling")
-            return
-        arole_list = ["Test Role"]
-        if answer.content.upper() != "NONE":
-            arole_list = answer.content.split(",")
-
-            try:
-                arole_list = [discord.utils.get(server.roles, name=role.strip('Test Role')).id for role in arole_list]
-            except:
-                await self.bot.say("Invalid answer, canceling")
-                return
     
     @commands.command()
     async def punch(self, user : discord.Member):
