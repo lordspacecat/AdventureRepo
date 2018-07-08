@@ -9,10 +9,10 @@ class Adventure:
         
     
     @commands.command()
-    async def punch(self, user : discord.Member):
+    async def punch(self, role : discord.Role):
         """I will punch anyone! >.<"""
 
-        await self.bot.say("You punched " + user.mention + "!")
+        await self.bot.say("You punched " + discord.Role + "!")
 
     @commands.command(no_pm=False)
     async def beginadventure(self):
