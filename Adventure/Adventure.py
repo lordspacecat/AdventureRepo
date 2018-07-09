@@ -8,14 +8,12 @@ class Adventure:
         self.bot = bot
         
         
-    @commands.command(pass_context=True)
-    async def beginadventure(self, ctx):
-        """One path of many begins - quote from someone"""
+    @commands.command(no_pm=False, pass_context=True)
+    async def oregontrail(self, ctx):
+        """Begin the Oregon Trail."""
         
-        name = ctx.message.author.name
-        date = ctx.message.timestamp
-        await self.bot.say("" + name + " has began his journey on")
-        await self.bot.say("" + date + "!")
+        user = ctx.message.author.name
+        await self.bot.say("" + user + " began the Oregon Trail. \n Many kinds of people made the trip to Oregon. \nYou may: \n!banker - Be a banker from Boston \n!carpenter - Be a carpenter from Ohio \n!farmer - Be a farmer from Illinois")
         
         
 def setup(bot):
