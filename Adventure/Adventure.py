@@ -15,9 +15,9 @@ class Adventure:
         user = ctx.message.author.name
         await self.bot.say("" + user + " must make a choice. \nIn order to survive, " + user + " must kill person 1 or person 2")
             
-        answer = await self.bot.wait_for_message(timeout=10)
+        answer = await self.bot.wait_for_message(timeout=10, user=ctx.message.author.name)
         
-        if no answer:
+        if not answer:
             await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
         
         
