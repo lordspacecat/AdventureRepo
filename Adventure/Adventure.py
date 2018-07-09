@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Adventure
+class Adventure:
     """This is a cog"""
     
     def __init__(self, bot):
