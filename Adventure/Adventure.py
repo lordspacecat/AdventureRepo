@@ -6,21 +6,14 @@ class Adventure:
 
     def __init__(self, bot):
         self.bot = bot
-    
-    @commands.command(pass_context=True)
-    async def multiply(*args):
-        z = 1
-        for num in args:
-            z = num
-        print(z)
+        
         
     @commands.command(pass_context=True)
     async def beginadventure(self, ctx):
         """One path of many begins - quote from someone"""
         
         name = ctx.message.author.name
-        await self.bot.say(name)
-        await self.bot.say("began his adventure. \nIf you are 'Ticketed you may continue.")
+        await self.bot.say(" + name + " "began his journey!")
    
 
 def setup(bot):
