@@ -19,6 +19,7 @@ class Adventure:
         
         if not answer:
             await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
+            return
         
         
 def setup(bot):
