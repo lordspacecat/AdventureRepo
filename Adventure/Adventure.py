@@ -16,8 +16,8 @@ class Adventure:
         user = ctx.message.author.name
         answer = await self.bot.wait_for_message(timeout=10)
         
-            if answer:
-                await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
+        if answer:
+            await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
         
         
 def setup(bot):
