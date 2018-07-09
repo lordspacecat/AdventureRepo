@@ -13,7 +13,7 @@ class Adventure:
         """Begin your adventure."""
         
         user = ctx.message.author.name
-        answer = await self.bot.wait_for_message(timeout=120, author=author)
+        answer = await self.bot.wait_for_message(timeout=120, user=user)
         
         if not answer:
             await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
