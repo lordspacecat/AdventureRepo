@@ -13,7 +13,10 @@ class Adventure:
         """One path of many begins - quote from someone"""
         
         name = ctx.message.author.name
-        await self.bot.say("" + name + " has began his journey on " + ctx.message.timestamp + "!")
-
+        date = ctx.message.timestamp
+        await self.bot.say("" + name + " has began his journey on")
+        await self.bot.say("" + date + "!")
+        
+        
 def setup(bot):
     bot.add_cog(Adventure(bot)) 
