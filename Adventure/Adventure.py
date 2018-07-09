@@ -8,12 +8,15 @@ class Adventure:
         self.bot = bot
         
         
-    @commands.command(no_pm=False, pass_context=True)
-    async def oregontrail(self, ctx):
-        """Begin the Oregon Trail."""
+    @commands.command(no_pm=False, pass_context=True, timeout=10)
+    async def beginadventure(self, ctx):
+        """Begin your adventure."""
         
         user = ctx.message.author.name
-        await self.bot.say("" + user + " began the Oregon Trail. \n Many kinds of people made the trip to Oregon. \nYou may: \n!banker - Be a banker from Boston \n!carpenter - Be a carpenter from Ohio \n!farmer - Be a farmer from Illinois")
+        if not answer:
+            await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
+            
+        await self.bot.say("" + user + " must make a choice. \nIn order to survive, " + user + " must kill person 1 or person 2")
         
         
 def setup(bot):
