@@ -8,12 +8,12 @@ class Adventure:
         self.bot = bot
         
         
-    @commands.command(no_pm=False, pass_context=True, timeout=10)
+    @commands.command(no_pm=False, pass_context=True)
     async def beginadventure(self, ctx):
         """Begin your adventure."""
         
         user = ctx.message.author.name
-        answer = await self.bot.wait_for_message(timeout=120,)
+        answer = await self.bot.wait_for_message(timeout=120)
         
         if not answer:
             await self.bot.say("Time's up, " + user + " . Due to your indecisiveness, both Person 1 and Person 2 shall die.")
